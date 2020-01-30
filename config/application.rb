@@ -31,6 +31,15 @@ module CapstoneApp
     Mongoid.load!("./config/mongoid.yml")
 
     config.generators {|g| g.orm :active_record}
+
+    config.middleware.insert_before 0, "Rack::Cors" do
+      allow do
+        origins '*'
+        resource '/api/*', 
+        headers: :any, 
+        methods: [:get] #, :post, :options
+      end
+    end
     
 
     # Do not swallow errors in after_commit/after_rollback callbacks.

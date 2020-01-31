@@ -5,3 +5,9 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+cities = ["Chicago", "Baltimore", "Seattle", "San Francisco"]
+states = ["Illinois", "Maryland", "Washington", "California"]
+
+cities.each {|city| City.create(name: "#{city}")}
+states.each {|state| State.create(name: "#{state}")}

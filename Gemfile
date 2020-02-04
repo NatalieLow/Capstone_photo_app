@@ -11,6 +11,7 @@ gem 'jbuilder', '~>2.0', '>=2.6.0'
 
 gem 'puma', '~>3.6', '>=3.6.0'#, :platforms=>:ruby
 gem 'pg', '~>0.20.0'
+gem 'mongo', '~>2.9', '<2.10'
 gem 'mongoid', '~>5.1', '>=5.1.5'
 
 group :development do 

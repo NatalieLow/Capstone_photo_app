@@ -8,6 +8,7 @@
 
 cities = ["Chicago", "Baltimore", "Seattle", "San Francisco"]
 states = ["Illinois", "Maryland", "Washington", "California"]
-
+City.all.destroy_all
 cities.each {|city| City.create(name: "#{city}")}
+State.all.destroy_all
 states.each {|state| State.create(name: "#{state}")}
